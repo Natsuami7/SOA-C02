@@ -1,0 +1,96 @@
+# EC2
+
+---
+
+## ✨ EC2 Essentials for the Exam
+
+- EC2 = virtual machines (instances) launched from AMIs (Amazon Machine Images)
+- Designed for elasticity: scale up/down based on demand
+- Choose specific Regions and AZs for high availability and redundancy
+
+---
+
+## 🔍 Instance Types & Lifecycle
+
+- **Instance Families**:
+    - General Purpose (T, M), Compute Optimized (C), Memory (R), Storage (I)
+- **Lifecycle Actions**:
+    - Launch → Stop → Start → Terminate
+- **Stop**: Keeps EBS data, loses instance store
+- **Terminate**: Deletes instance and storage unless EBS "Delete on Termination" is disabled
+
+---
+
+## 📥 Storage Options
+
+- **EBS (Elastic Block Store)**:
+    - Persistent storage
+    - Snapshots supported
+    - Can be encrypted (KMS integration)
+- **Instance Store**:
+    - Ephemeral storage tied to the instance
+    - Lost when stopped or terminated
+
+---
+
+## 🌐 Networking & IPs
+
+- **Elastic IP**: Static IPv4 address retained across instance stops/starts
+- **Security Groups**: Stateful, instance-level firewall
+- **NACLs**: Stateless, subnet-level firewall
+- **Private IP/Public IP** managed via VPC
+
+---
+
+## 🔐 Security & Access
+
+- Use **Key Pairs** for SSH access
+- Attach **IAM Roles** to EC2 for secure permissions (no hardcoding credentials)
+- Enable **EBS Encryption** using **KMS (Key Management Service)**
+
+---
+
+## ⚙️ Monitoring & Maintenance
+
+- **CloudWatch**: Monitor CPU, network, disk, memory (custom metrics)
+- **CloudTrail**: Logs API activity for auditing
+- **EBS Snapshots**: Backup strategy, automate with Lifecycle Manager
+- **Auto Scaling**: Adjust instance count using metrics or schedules
+
+---
+
+## ⚡ High Availability & Resilience
+
+- **Placement Groups**:
+    - Cluster (low latency, same hardware)
+    - Spread (instances across racks for fault tolerance)
+- Use with multi-AZ, Load Balancers, and Auto Scaling
+
+---
+
+## ❌ Skip/Skim (Low Exam Value)
+
+- EC2 pricing models in depth (On-Demand vs Reserved vs Spot)
+- Marketplace details
+- Cost calculators and TCO comparisons
+
+---
+
+## 🤓 Exam Tips
+
+- IAM Role + EC2 = secure permissions without keys
+- Always choose **EBS** for persistent data needs
+- Know difference between **SG** and **NACL**
+- Understand **snapshot encryption** and cross-region use cases
+- Be confident with monitoring and auto-recovery setups
+
+---
+
+## 📚 Suggested Practice
+
+- Launch EC2, attach IAM role, enable CloudWatch
+- Create/restore snapshots
+- Trigger auto-scaling from CloudWatch alarm
+- Block ports using Security Group rules
+
+---
