@@ -1,4 +1,8 @@
 # SOA-C02
-Prep Labs for SysOPS Admin
+This repo has the notes which I made and with the help of AI to summarize the notes so that each and everyone will be able to revise it as quickly as possible.
 
-Lab 1 # EC2 Instance
+
+
+
+
+NOTE : THIS IS KIND OF CHEATSHEAT.
